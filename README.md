@@ -29,3 +29,7 @@
 3. xgboost
 4. tensorflow nn
 
+# Citation
+
+Vaccari, I.; Chiola, G.; Aiello, M.; Mongelli, M.; Cambiaso, E. MQTTset, a New Dataset for Machine Learning Techniques on MQTT. Sensors 2020, 20, 6578. https://doi.org/10.3390/s20226578
+
