@@ -4,8 +4,13 @@
 # Data
 [https://www.kaggle.com/datasets/cnrieiit/mqttset?resource=download](https://www.kaggle.com/datasets/cnrieiit/mqttset?resource=download)
 
+# Traditional Approach
+1. Protocol Parsing and Strict Validations
+    - Husnain M, Hayat K, Cambiaso E, Fayyaz UU, Mongelli M, Akram H, Ghazanfar Abbas S, Shah GA. Preventing MQTT Vulnerabilities Using IoT-Enabled Intrusion Detection System. Sensors (Basel). 2022 Jan 12;22(2):567. doi: 10.3390/s22020567. PMID: 35062536; PMCID: PMC8779830.
+    - Require a lot of human effort to define the validation rules.
+    - Risk of getting reverse-engineered by malicious users
 
-# Previous Approach
+# Previous ML Approach
 1. modes: tensorflow nn + DecisionTree + NaiveBayes
 2. Oversampling before splitting # very biased
 3. Kept a lot of bad features (large number of null values, bad distribution)
