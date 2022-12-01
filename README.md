@@ -13,22 +13,21 @@
 # Previous ML Approach
 1. modes: tensorflow nn + DecisionTree + NaiveBayes
 2. Oversampling before splitting # very biased
-3. Kept a lot of bad features (large number of null values, bad distribution)
 4. No feature scaling
 
 
 # Plan
 1. Preprocess
     - combine datasets
-    - drop less useful features
+    - drop less useful features (following the original paper's approach)
     - impute null values
     - encode nomial and categorical features
     - encode label
     - Train/Test Split 
     - Feature Scaling
     - Resampling
-        - Oversampling
-        - SMOTE
+        - Oversampling, SMOTE
+        - Hybrid 
 2. sklearn ml
     - random forest
 3. xgboost
