@@ -1,3 +1,4 @@
+import numpy as np
 from sklearn.metrics import accuracy_score, f1_score
 
 
@@ -9,4 +10,14 @@ def eval(model, x_tr, x_te, y_tr, y_te):
     print("Training Result: ", report(accuracy_score(y_tr, yh), f1_score(y_tr, yh, average=None)))
 
     yh = model.predict(x_te)
+    print("Testing  Result: ", report(accuracy_score(y_te, yh), f1_score(y_te, yh, average=None)))
+
+
+def eval_tf(model, x_tr, x_te, y_tr, y_te):
+    yh = model.predict(x_tr, batch_size=8192)
+    yh = np.argmax(yh,axis=1)
+    print("Training Result: ", report(accuracy_score(y_tr, yh), f1_score(y_tr, yh, average=None)))
+
+    yh = model.predict(x_te, batch_size=8192)
+    yh = np.argmax(yh,axis=1)
     print("Testing  Result: ", report(accuracy_score(y_te, yh), f1_score(y_te, yh, average=None)))
